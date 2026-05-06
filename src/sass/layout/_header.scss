@@ -1,0 +1,21 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 20px;
+
+  a {
+    margin-bottom: 20px;
+  }
+
+  div.iconos {
+    display: flex;
+    gap: 25px;
+  }
+}
