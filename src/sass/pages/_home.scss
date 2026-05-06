@@ -1,27 +1,39 @@
 main {
   section.primera_seccion {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+
     img.hombre_mobile {
-      margin-top: -50%;
+      width: 80%;
+      margin-top: -30%;
       z-index: 9;
       position: relative;
+      max-width: 400px;
     }
 
     img.elipses {
-      position: relative;
-      top: -470px;
-      right: 20px;
+      position: absolute;
+      top: 15%;
+      right: 60%;
       z-index: 8;
     }
 
     img.circulo {
-      position: relative;
-      top: -290px;
-      right: -100px;
-      z-index: 8;
+      position: absolute; 
+      top: 35%;            
+      right: -5%;           
+      width: 20%;         
+      max-width: 150px; 
+      z-index: 9;
+      
     }
 
     div.presentacion {
-      margin-top: -100px;
+      margin-top: 40px;
 
       h1 {
         font-size: 35px;
