@@ -16,6 +16,8 @@ main {
 
     img.elipses {
       position: absolute;
+      width: 70%;
+      max-width: 100%;
       top: 15%;
       right: 60%;
       z-index: 8;
@@ -53,16 +55,11 @@ main {
         margin-bottom: 24px;
         text-align: center;
       }
-
       div.boton1 {
         display: flex;
-        align-items: center;
         justify-content: center;
-
-        div.boton_formulario {
-          button {
-            @include boton_defecto;
-          }
+        button {
+          @include boton_defecto;
         }
       }
     }
@@ -91,6 +88,10 @@ main {
       transform: rotate(180deg);
       top: 90%;
       right: -10%;
+      img {
+        max-width: 100%;
+        width: 100%;
+      }
     }
   }
 

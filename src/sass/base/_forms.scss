@@ -1,4 +1,19 @@
 @mixin formulario_defecto {
   background-color: transparent;
   color: white;
+  font-family: $fuente_principal;
+  outline: none;
+  padding-bottom: 16px;
+  &:focus {
+    border-bottom: 3px solid $esmeralda;
+  }
+  &:focus:invalid {
+    border-bottom: 3px solid red;
+  }
+
+  &:-webkit-autofill {
+    -webkit-text-fill-color: white !important;
+    -webkit-text-fill-color: 3px solid white !important;
+    box-shadow: 0 0 0px 1000px #242424 inset !important;
+  }
 }
