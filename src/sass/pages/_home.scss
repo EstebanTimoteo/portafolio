@@ -1,6 +1,5 @@
 main {
   section.primera_seccion {
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,13 +22,12 @@ main {
     }
 
     img.circulo {
-      position: absolute; 
-      top: 35%;            
-      right: -5%;           
-      width: 20%;         
-      max-width: 150px; 
+      position: absolute;
+      top: 35%;
+      right: -7%;
+      width: 20%;
+      max-width: 150px;
       z-index: 9;
-      
     }
 
     div.presentacion {
@@ -61,8 +59,10 @@ main {
         align-items: center;
         justify-content: center;
 
-        button {
-          @include boton_defecto;
+        div.boton_formulario {
+          button {
+            @include boton_defecto;
+          }
         }
       }
     }
@@ -75,6 +75,7 @@ main {
     border-top: 3px solid white;
     border-bottom: 3px solid white;
     text-align: center;
+    position: relative;
 
     h2 {
       font-size: 32px;
@@ -84,6 +85,69 @@ main {
       font-size: 16px;
       color: $gris-claro;
       margin-bottom: 24px;
+    }
+    div.elipses2 {
+      position: absolute;
+      transform: rotate(180deg);
+      top: 90%;
+      right: -10%;
+    }
+  }
+
+  section.tercera_seccion {
+    margin-top: 80px;
+
+    div.titulo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 71px;
+      margin-bottom: 40px;
+
+      h2 {
+        font-size: 40px;
+        font-weight: bold;
+      }
+
+      button {
+        @include boton_defecto;
+      }
+    }
+    div.articulos {
+      article {
+        img {
+          max-width: 100%;
+          width: 100%;
+        }
+
+        h3 {
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 7px;
+          margin-top: 20px;
+        }
+
+        div.pes {
+          display: flex;
+          gap: 18px;
+
+          p {
+            color: $gris-claro;
+            font-size: 18px;
+          }
+        }
+
+        div.botones1 {
+          margin-top: 20px;
+          display: flex;
+          gap: 30px;
+
+          button {
+            @include boton_defecto;
+            margin-bottom: 40px;
+          }
+        }
+      }
     }
   }
 }

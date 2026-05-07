@@ -1,0 +1,60 @@
+footer {
+  background-color: #242424;
+
+  section.cuarta_seccion {
+    border-bottom: 3px solid white;
+    padding: 60px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+
+    h2 {
+      font-size: 62px;
+      font-weight: bold;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      input,
+      textarea {
+        @include formulario_defecto;
+      }
+
+      div.boton_formulario {
+        display: flex;
+        justify-content: end;
+
+        button {
+          @include boton_defecto;
+        }
+      }
+    }
+    div.elipses3 {
+      position: absolute;
+      top: 70%;
+      right: 55%;
+    }
+  }
+
+  div.pie-pagina {
+    padding: 60px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+    div.iconos {
+      display: flex;
+      gap: 26px;
+    }
+  }
+}
