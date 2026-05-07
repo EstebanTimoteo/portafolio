@@ -18,4 +18,18 @@ header {
     display: flex;
     gap: 25px;
   }
+
+  @include breakpoint(tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px;
+
+    a img {
+      width: 150%;
+    }
+
+    div.iconos {
+      gap: 32px;
+    }
+  }
 }

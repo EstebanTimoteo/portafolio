@@ -14,20 +14,26 @@ footer {
       font-size: 62px;
       font-weight: bold;
       text-align: center;
+
+      @include breakpoint(tablet) {
+        font-size: 72px;
+      }
     }
     p {
       text-align: center;
+      color: $gris_claro;
+
+      @include breakpoint(tablet) {
+        font-size: 20px;
+        margin-bottom: 48px;
+      }
     }
 
     form {
       display: flex;
       flex-direction: column;
       gap: 30px;
-
-      input,
-      textarea {
-        @include formulario_defecto;
-      }
+      @include formulario_defecto;
 
       div.boton_formulario {
         display: flex;
@@ -40,11 +46,13 @@ footer {
     }
     div.elipses3 {
       position: absolute;
-      top: 70%;
-      right: 75%;
-      img {
-        max-width: 100%;
-        width: 100%;
+      width: 50%;
+      max-width: 100%;
+      top: 65%;
+      right: 60%;
+
+      img{
+        width: 80%;
       }
     }
   }
@@ -60,5 +68,19 @@ footer {
       display: flex;
       gap: 26px;
     }
+
+    @include breakpoint(tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px;
+
+    a img {
+      width: 150%;
+    }
+
+    div.iconos {
+      gap: 32px;
+    }
+  }
   }
 }

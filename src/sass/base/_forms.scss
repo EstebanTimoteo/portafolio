@@ -4,16 +4,56 @@
   font-family: $fuente_principal;
   outline: none;
   padding-bottom: 16px;
-  &:focus {
-    border-bottom: 3px solid $esmeralda;
-  }
-  &:focus:invalid {
-    border-bottom: 3px solid red;
-  }
 
-  &:-webkit-autofill {
-    -webkit-text-fill-color: white !important;
-    -webkit-text-fill-color: 3px solid white !important;
-    box-shadow: 0 0 0px 1000px #242424 inset !important;
+  .input-group {
+    position: relative;
+    margin-bottom: 20px;
+
+    input,
+    textarea {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid white;
+      background: transparent;
+      outline: none;
+      color: white;
+      font-size: 16px;
+      padding-bottom: 16px;
+      padding-left: 24px;
+
+      &:focus {
+        border-bottom: 3px solid $esmeralda;
+      }
+      &:invalid:not(:focus):not(:placeholder-shown),
+      &:invalid:not(:focus):placeholder-shown:not(:placeholder-shown) {
+        border-bottom: 1px solid red;
+
+        & + .error-message {
+          display: block;
+        }
+      }
+
+      &:-webkit-autofill {
+        -webkit-text-fill-color: white !important;
+        -webkit-text-fill-color: 3px solid white !important;
+        box-shadow: 0 0 0px 1000px #242424 inset !important;
+      }
+
+      &:user-invalid {
+        border-bottom: 3px solid red;
+
+        & + .error-message {
+          display: block;
+        }
+      }
+    }
+
+    .error-message {
+      display: none;
+      color: red;
+      font-size: 10px;
+      text-align: right;
+      margin-top: 5px;
+    }
   }
 }

@@ -12,6 +12,15 @@ main {
       z-index: 9;
       position: relative;
       max-width: 400px;
+
+      @include breakpoint(tablet) {
+        position: absolute;
+        top: -150px;
+        right: -30px;
+        margin-top: 0;
+        width: 40%;
+        max-width: 500px;
+      }
     }
 
     img.elipses {
@@ -21,6 +30,12 @@ main {
       top: 15%;
       right: 60%;
       z-index: 8;
+
+      @include breakpoint(tablet) {
+        width: 50%;
+        top: 5%;
+        right: 70%;
+      }
     }
 
     img.circulo {
@@ -28,12 +43,23 @@ main {
       top: 35%;
       right: -7%;
       width: 20%;
-      max-width: 150px;
+      max-width: 100%;
       z-index: 9;
+
+      @include breakpoint(tablet) {
+        width: 10%;
+        max-width: 100%;
+        top: 400px;
+        right: -4%;
+        z-index: 9;
+      }
     }
 
     div.presentacion {
       margin-top: 40px;
+      @include breakpoint(tablet) {
+        margin-top: 90px;
+      }
 
       h1 {
         font-size: 35px;
@@ -47,6 +73,11 @@ main {
           text-decoration-color: $esmeralda;
           text-decoration-thickness: 5px;
         }
+
+        @include breakpoint(tablet) {
+          font-size: 72px;
+          max-width: 60%;
+        }
       }
 
       p {
@@ -54,12 +85,27 @@ main {
         color: $gris-claro;
         margin-bottom: 24px;
         text-align: center;
+
+        @include breakpoint(tablet) {
+          font-size: 20px;
+          max-width: 50%;
+          text-align: left;
+          margin-bottom: 34px;
+          margin-top: 60px;
+        }
       }
       div.boton1 {
         display: flex;
         justify-content: center;
         button {
           @include boton_defecto;
+        }
+
+        @include breakpoint(tablet) {
+          font-size: 16px;
+          text-align: left;
+          justify-content: left;
+          margin-bottom: 60px;
         }
       }
     }
@@ -74,14 +120,28 @@ main {
     text-align: center;
     position: relative;
 
+    @include breakpoint(tablet) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+
     h2 {
       font-size: 32px;
       font-weight: bold;
+
+      @include breakpoint(tablet) {
+        font-size: 48px;
+      }
     }
     p {
       font-size: 16px;
       color: $gris-claro;
       margin-bottom: 24px;
+
+      @include breakpoint(tablet) {
+        font-size: 18px;
+      }
     }
     div.elipses2 {
       position: absolute;
@@ -92,11 +152,20 @@ main {
         max-width: 100%;
         width: 100%;
       }
+
+      @include breakpoint(tablet) {
+        top: 60%;
+        width: 40%;
+      }
     }
   }
 
   section.tercera_seccion {
     margin-top: 80px;
+
+    @include breakpoint(tablet) {
+      margin-top: 120px;
+    }
 
     div.titulo {
       display: flex;
@@ -105,9 +174,17 @@ main {
       gap: 71px;
       margin-bottom: 40px;
 
+      @include breakpoint(tablet) {
+        margin-bottom: 60px;
+      }
+
       h2 {
         font-size: 40px;
         font-weight: bold;
+
+        @include breakpoint(tablet) {
+          font-size: 72px;
+        }
       }
 
       button {
@@ -115,6 +192,13 @@ main {
       }
     }
     div.articulos {
+      @include breakpoint(tablet) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 22px;
+      }
+
       article {
         img {
           max-width: 100%;

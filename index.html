@@ -56,18 +56,30 @@
       </section>
 
       <section class="segunda_seccion">
-        <h2>HTML</h2>
-        <p>4 Years Experience</p>
-        <h2>CSS</h2>
-        <p>4 Years Experience</p>
-        <h2>Javascript</h2>
-        <p>4 Years Experience</p>
-        <h2>Accessibility</h2>
-        <p>4 Years Experience</p>
-        <h2>React</h2>
-        <p>3 Years Experience</p>
-        <h2>Sass</h2>
-        <p>3 Years Experience</p>
+        <div class="uno">
+          <h2>HTML</h2>
+          <p>4 Years Experience</p>
+        </div>
+        <div class="dos">
+          <h2>CSS</h2>
+          <p>4 Years Experience</p>
+        </div>
+        <div class="tres">
+          <h2>Javascript</h2>
+          <p>4 Years Experience</p>
+        </div>
+        <div class="cuatro">
+          <h2>Accessibility</h2>
+          <p>4 Years Experience</p>
+        </div>
+        <div class="cinco">
+          <h2>React</h2>
+          <p>3 Years Experience</p>
+        </div>
+        <div class="seis">
+          <h2>Sass</h2>
+          <p>3 Years Experience</p>
+        </div>
         <div class="elipses2">
           <img src="./src/assets/elipses.svg" alt="" class="elipses2" />
         </div>
@@ -175,33 +187,43 @@
         </p>
 
         <form class="contact-form">
-          <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            placeholder="NAME"
-            required
-          />
+          <div class="input-group">
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="NAME"
+              required
+            />
+            <span class="error-message">Sorry, invalid format here</span>
+          </div>
 
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="EMAIL"
-            required
-          />
+          <div class="input-group">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="EMAIL"
+              required
+            />
+            <span class="error-message">Sorry, invalid format here</span>
+          </div>
 
-          <textarea
-            id="mensaje"
-            name="mensaje"
-            rows="4"
-            placeholder="MESSAGE"
-          ></textarea>
+          <div class="input-group">
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="4"
+              placeholder="MESSAGE"
+            ></textarea>
+            <span class="error-message">Message cannot be empty</span>
+          </div>
 
           <div class="boton_formulario">
             <button type="submit">Enviar Mensaje</button>
           </div>
         </form>
+
         <div class="elipses3">
           <img src="./src/assets/elipses.svg" alt="elipses" />
         </div>
