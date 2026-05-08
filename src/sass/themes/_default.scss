@@ -16,4 +16,9 @@ body {
   @include breakpoint(tablet) {
     padding: 30px;
   }
+
+  @include breakpoint(desktop) {
+    padding-left: 165px;
+    padding-right: 165px;
+  }
 }

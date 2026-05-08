@@ -21,6 +21,28 @@ main {
         width: 40%;
         max-width: 500px;
       }
+
+      @include breakpoint(desktop) {
+        position: absolute;
+        top: -400px;
+        right: -30px;
+        margin-top: 0;
+        width: 40%;
+        max-width: 500px;
+      }
+    }
+    img.elipse_desktop {
+      display: none;
+
+      @include breakpoint(desktop) {
+        display: block;
+        position: absolute;
+        top: 10%;
+        width: 50%;
+        max-width: 100%;
+        right: 70%;
+        z-index: 8;
+      }
     }
 
     img.elipses {
@@ -35,6 +57,24 @@ main {
         width: 50%;
         top: 5%;
         right: 70%;
+      }
+
+      @include breakpoint(desktop) {
+        display: none;
+      }
+    }
+
+    img.circulo_desktop {
+      display: none;
+
+      @include breakpoint(desktop) {
+        display: block;
+        position: absolute;
+        top: 55%;
+        right: 25%;
+        width: 10%;
+        max-width: 100%;
+        z-index: 9;
       }
     }
 
@@ -52,6 +92,10 @@ main {
         top: 400px;
         right: -4%;
         z-index: 9;
+      }
+
+      @include breakpoint(desktop) {
+        display: none;
       }
     }
 
@@ -78,6 +122,11 @@ main {
           font-size: 72px;
           max-width: 60%;
         }
+
+        @include breakpoint(desktop) {
+          font-size: 88px;
+          max-width: 60%;
+        }
       }
 
       p {
@@ -93,6 +142,14 @@ main {
           margin-bottom: 34px;
           margin-top: 60px;
         }
+
+        @include breakpoint(desktop) {
+          font-size: 24px;
+          max-width: 50%;
+          text-align: left;
+          margin-bottom: 70px;
+          margin-top: 70px;
+        }
       }
       div.boton1 {
         display: flex;
@@ -106,6 +163,13 @@ main {
           text-align: left;
           justify-content: left;
           margin-bottom: 60px;
+        }
+
+        @include breakpoint(desktop) {
+          font-size: 16px;
+          text-align: left;
+          justify-content: left;
+          margin-bottom: 220px;
         }
       }
     }
@@ -124,6 +188,14 @@ main {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr;
+      gap: 50px;
+    }
+
+    @include breakpoint(desktop) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 58px;
     }
 
     h2 {
@@ -157,6 +229,23 @@ main {
         top: 60%;
         width: 40%;
       }
+
+      @include breakpoint(desktop) {
+        display: none;
+      }
+    }
+    img.elipses_desktop {
+      display: none;
+
+      @include breakpoint(desktop) {
+        display: block;
+        position: absolute;
+        transform: rotate(180deg);
+        top: 70%;
+        right: -20%;
+        max-width: 100%;
+        width: 40%;
+      }
     }
   }
 
@@ -165,6 +254,10 @@ main {
 
     @include breakpoint(tablet) {
       margin-top: 120px;
+    }
+
+    @include breakpoint(desktop) {
+      margin-top: 150px;
     }
 
     div.titulo {
@@ -178,12 +271,20 @@ main {
         margin-bottom: 60px;
       }
 
+      @include breakpoint(desktop) {
+        margin-bottom: 90px;
+      }
+
       h2 {
         font-size: 40px;
         font-weight: bold;
 
         @include breakpoint(tablet) {
           font-size: 72px;
+        }
+
+        @include breakpoint(desktop) {
+          font-size: 90px;
         }
       }
 
@@ -197,6 +298,10 @@ main {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         gap: 22px;
+      }
+
+      @include breakpoint(desktop) {
+        display: none;
       }
 
       article {
@@ -230,6 +335,109 @@ main {
           button {
             @include boton_defecto;
             margin-bottom: 40px;
+          }
+        }
+      }
+    }
+
+    div.articulos_desktop {
+      display: none;
+
+      @include breakpoint(desktop) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 70px;
+        column-gap: 30px;
+
+        article {
+          .hover {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            overflow: hidden;
+
+            img {
+              display: block;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: transform 0.3s ease;
+            }
+
+            a {
+              opacity: 0;
+              pointer-events: none;
+              position: absolute;
+              z-index: 2;
+              color: white;
+              text-decoration: none;
+              font-weight: bold;
+              border-bottom: 2px solid $esmeralda;
+              padding: 10px 0;
+              transition:
+                opacity 0.3s,
+                color 0.3s,
+                transform 0.3s;
+              top: 50%;
+              left: 50%;
+
+              &:nth-of-type(1) {
+                transform: translate(-50%, calc(-80% - 50px));
+              }
+              &:nth-of-type(2) {
+                transform: translate(-50%, calc(-80% + 50px));
+              }
+
+              &:hover {
+                color: $esmeralda;
+              }
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.7);
+              opacity: 0;
+              transition: opacity 0.3s;
+              z-index: 1;
+            }
+
+            &:hover {
+              &::after {
+                opacity: 1;
+              }
+
+              a {
+                opacity: 1;
+                pointer-events: auto;
+              }
+
+              img {
+                transform: scale(1.05);
+              }
+            }
+          }
+
+          h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 30px;
+          }
+
+          div.pes {
+            display: flex;
+            gap: 20px;
+            p {
+              font-size: 20px;
+              color: $gris-claro;
+            }
           }
         }
       }

@@ -51,8 +51,17 @@ footer {
       top: 65%;
       right: 60%;
 
-      img{
+      img {
         width: 80%;
+      }
+
+      @include breakpoint(desktop){
+        top: 25%;
+        right: 70%;
+
+        img {
+          width: 60%;
+        }
       }
     }
   }
@@ -67,20 +76,49 @@ footer {
     div.iconos {
       display: flex;
       gap: 26px;
+
+      img {
+        &:hover {
+          filter: invert(86%) sepia(21%) saturate(1067%) hue-rotate(97deg)
+            brightness(701%) contrast(92%);
+        }
+      }
     }
 
     @include breakpoint(tablet) {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 30px;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 30px;
 
-    a img {
-      width: 150%;
-    }
+      a img {
+        width: 150%;
+      }
 
-    div.iconos {
-      gap: 32px;
+      div.iconos {
+        gap: 32px;
+      }
     }
   }
+
+  @include breakpoint(desktop){
+    margin-top: 140px;
+
+    section.cuarta_seccion{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      h2{
+        font-size: 90px;
+        text-align: left;
+      }
+      p{
+        font-size: 20px;
+        color: $gris_claro;
+        text-align: left;
+        width: 60%;
+        margin-top: 40px;
+      }
+    }
+    
   }
 }

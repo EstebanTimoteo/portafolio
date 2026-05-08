@@ -12,6 +12,13 @@ header {
 
   a {
     margin-bottom: 20px;
+
+    img {
+      &:hover {
+        filter: invert(86%) sepia(21%) saturate(1067%) hue-rotate(97deg)
+          brightness(701%) contrast(92%);
+      }
+    }
   }
 
   div.iconos {
@@ -23,6 +30,20 @@ header {
     flex-direction: row;
     justify-content: space-between;
     padding: 30px;
+
+    a img {
+      width: 150%;
+    }
+
+    div.iconos {
+      gap: 32px;
+    }
+  }
+
+  @include breakpoint(desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 43px 165px;
 
     a img {
       width: 150%;
