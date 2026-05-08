@@ -3,7 +3,6 @@ import { resolve } from "path";
 
 export default defineConfig({
   // SUSTITUYE 'galeria_arte_moderno' por el nombre exacto de tu repositorio
-  base: "/galeria_arte_moderno/",
   base: './',
 
   build: {
